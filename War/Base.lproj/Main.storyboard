@@ -56,6 +56,12 @@
                                             <action selector="dealTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5jD-Xc-UiF"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwW-yj-V0T">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="top" misplaced="YES" distribution="fillEqually" alignment="top" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="QPG-9Z-VDM" userLabel="ScoreLabelStackView">
                                         <rect key="frame" x="141" y="328" width="279" height="252"/>
                                         <subviews>
@@ -95,19 +101,29 @@
                                             </stackView>
                                         </subviews>
                                         <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="41" y="328" width="279" height="72"/>
+                                            <rect key="frame" x="41" y="396" width="279" height="72"/>
                                         </variation>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTf-uE-24J" userLabel="WinningLabel">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="420" width="360" height="160"/>
+                                            <rect key="frame" x="0.0" y="488" width="360" height="92"/>
                                         </variation>
                                     </label>
                                 </subviews>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="vwW-yj-V0T"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="vwW-yj-V0T"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -123,6 +139,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="deals" destination="vwW-yj-V0T" id="okJ-e3-lfl"/>
                         <outlet property="leftImageView" destination="hf5-vK-RnB" id="iLK-DC-doP"/>
                         <outlet property="leftScoreLabel" destination="vaH-de-315" id="ahb-tE-S0W"/>
                         <outlet property="rightImageView" destination="6tX-9u-OdO" id="hKf-cv-7yT"/>

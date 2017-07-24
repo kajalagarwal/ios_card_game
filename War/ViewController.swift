@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     var numberOfDeals = 0
     @IBOutlet weak var winnerLabel: UILabel!
     
+    @IBOutlet weak var deals: UILabel!
+    
     let cardNames = ["card2", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", "jack", "queen", "king", "ace"]
     
     override func viewDidLoad() {
@@ -63,6 +65,7 @@ class ViewController: UIViewController {
         let leftNumber = Int(arc4random_uniform(13))
         numberOfDeals += 1
         
+        deals.text = String(numberOfDeals)
         leftImageView.image = UIImage(named: cardNames[leftNumber])
         
         // Randomize the right card number and make sure it is Int datatype
